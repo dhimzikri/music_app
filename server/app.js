@@ -7,7 +7,7 @@ const { default: mongoose } = require("mongoose");
 require("dotenv/config");
 const source = process.env.DB_STRING;
 
-// app.use(cors({origin : true}))
+app.use(cors({origin : true}))
 
 app.get("/", (req, res) => {
     return res.json("Hi bro")
