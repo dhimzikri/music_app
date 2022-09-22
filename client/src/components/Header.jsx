@@ -28,7 +28,7 @@ const Header = () => {
   return (
     <header className="flex items-center w-full p-4 md:py-2 md:px-6">
       <NavLink to={"/"}>
-        <img src={Logo} alt="Logo" className="w-16" />
+        <img src={Logo} alt="Logo" className="w-14" />
       </NavLink>
 
       <ul className="flex items-center justify-center ml-7">
@@ -76,7 +76,7 @@ const Header = () => {
 
       <div
         onMouseEnter={() => setisMenu(true)}
-        onMouseLeave={() => setisMenu(false)}
+        onMouseLeave={() => setisMenu(false) }
         className="flex items-center ml-auto cursor-pointer gap-2 relative"
       >
         <img
@@ -99,7 +99,7 @@ const Header = () => {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className="absolute z-10 top-12 right-0 w-275 gap-2 bg-card shadow-lg rounded-lg backdrop-blur-sm flex flex-col p-3"
+            className="absolute z-10 top-12 right-0 w-225 gap-2 bg-card shadow-lg rounded-lg backdrop-blur-sm flex flex-col p-3"
           >
             <NavLink to={"/userProfile"}>
               <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
