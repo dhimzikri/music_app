@@ -76,7 +76,7 @@ const Header = () => {
 
       <div
         onMouseEnter={() => setisMenu(true)}
-        onMouseLeave={() => setisMenu(false) }
+        onMouseLeave={() => setisMenu(false)}
         className="flex items-center ml-auto cursor-pointer gap-2 relative"
       >
         <img
@@ -112,6 +112,22 @@ const Header = () => {
             </p>
             <hr />
 
+            <NavLink to={"/dashboard/home"}>
+              <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+                Dashboard
+              </p>
+            </NavLink>
+            <hr />
+
+            {user?.user?.role === "admin" && (
+              <>
+                <NavLink to={"/dashboard/home"}>
+                  <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+                    Dashboard
+                  </p>
+                </NavLink>
+              </>
+            )}
             <p
               className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out"
               onClick={logOut}

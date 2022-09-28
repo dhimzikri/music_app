@@ -7,7 +7,7 @@ const { default: mongoose } = require("mongoose");
 require("dotenv/config");
 const source = process.env.DB_STRING;
 
-app.use(cors({origin : true}))
+app.use(cors({ origin: true }))
 
 app.get("/", (req, res) => {
     return res.json("Hi bro")
@@ -16,6 +16,16 @@ app.get("/", (req, res) => {
 // user auth
 const userRoute = require("./routes/auth")
 app.use("/api/users/", userRoute);
+
+// artist route
+const artistRoutes = require("./routes/artist")
+app.use("/api/artist/", artistRoutes)
+// album route
+const albumRoutes = require("./routes/album")
+app.use("/api/album", albumRoutes)
+// song route
+const songRoutes = require("./routes/song")
+app.use("/api/song", songRoutes)
 
 mongoose.connect(source, { useNewUrlParser: true })
 mongoose.connection.once("open", () => console.log("Connected")).on("error", () => {
