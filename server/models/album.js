@@ -10,6 +10,10 @@ const albumScheme = mongoose.Schema(
             type: String,
             require: true,
         },
+        year: {
+            type: String,
+            require: true,
+        },
     },
     {timestamps : true}
 )
