@@ -30,7 +30,7 @@ app.use("/api/song", songRoutes)
 
 mongoose.connect(source, { useNewUrlParser: true })
 mongoose.connection.once("open", () => console.log("Connected")).on("error", () => {
-    console.log(`ERORR : ${error}`)
+    console.log(`ERORR : ${mongoose}`)
 })
 console.log(process.env.DB_STRING)
 app.listen(4000, () => console.log("listening to port:4000"))
