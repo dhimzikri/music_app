@@ -2,7 +2,7 @@ const mongoose = require("mongoose")
 
 const songScheme = mongoose.Schema(
     {
-        name: {
+        tittle: {
             type: String,
             require: true,
         },
@@ -14,13 +14,13 @@ const songScheme = mongoose.Schema(
             type: String,
             require: true,
         },
+        artist: {
+            type: String,
+            require: true,
+        },
         album: {
             type: String,
             // require: true,
-        },
-        languange: {
-            type: String,
-            require: true,
         },
         category: {
             type: String,

@@ -52,10 +52,13 @@ router.put("/update/:id", async(req,res) => {
     
     try {
         const result = await album.findOneAndUpdate(filter,{
-
-        })
+            name: req.body.name,
+            imageURL: req.body.imageURL,
+            year: req.body.year,
+        }, option)
+        return res.status(200).send({succes: true, data: result})
     } catch (error) {
-        
+        return res.status(400).send({succes: false, msg: error})
     }
 })
 
